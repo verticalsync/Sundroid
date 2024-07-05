@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'me.verticalsync.sundroid'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "me.verticalsync.sundroid"
+        minSdk 21
+        targetSdk 33
+        versionCode 3
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".dbg"
+        }
+
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.5.0'
+}
+
